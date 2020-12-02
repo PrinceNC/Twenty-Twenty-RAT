@@ -1,0 +1,93 @@
+body {
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+#fileDirectoryIframe {
+    height: 100%;
+    width: 100%;
+}
+
+.victimItemWrapper {
+    max-width: 85%;
+    width: 85%;
+    height: 95%;
+    margin-top: 0.6rem;
+    padding: 0.3rem;
+}
+
+.victimItemWrapper:first-child {
+    position: relative;
+}
+
+.victimItemWrapper button {
+    position: relative;
+    right: 0;
+    margin-right: 0.25rem;
+}
+
+#victimList {
+    overflow: auto;
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+}
+
+main {
+    margin-top: 0.5vh;
+    margin-bottom: 0.3vh;
+}
+
+.primary-header-text {
+    display: inline-block;
+    animation-duration: 1.5s;
+    animation-name: shake;
+    animation-timing-function: step-start;
+    animation-play-state: running;
+    color: #dd6b20;
+    font-family: "UnifrakturCook", cursive;
+    font-size: 3rem;
+}
+
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
+}
+
+.secondary-header-text {
+    display: inline;
+    color: #ed8936;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+}
+
+#closeButton:hover {
+    color: #e53e3e;
+}
+
+#content {
+    height: 65vh; 
+    width: 95%; 
+    margin-top: 1vh;
+    overflow: auto;
+}
+
+#victimsPanelContainer {
+    height: 85vh;
+    margin-top: 5vh;
+    margin-right: 0.5vw;
+}
+
+#commandPanelContainer {
+    height: 85vh;
+}
+
+.icon-image {
+    margin-right: 0.1rem;
+}

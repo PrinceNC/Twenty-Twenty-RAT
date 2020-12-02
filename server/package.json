@@ -1,0 +1,23 @@
+{
+  "name": "rat-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "postcss viewer/styles/tailwind.css -o viewer/styles/tailwindbuild.css",
+    "start": "npm run build-css && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0",
+    "socket.io": "^2.3.0",
+    "tailwindcss": "^1.9.6"
+  }
+}

