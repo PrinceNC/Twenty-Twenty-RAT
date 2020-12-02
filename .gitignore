@@ -1,0 +1,35 @@
+# Logs
+logs
+*.logs
+server/npm-debug.log*
+
+# Optional npm cache directory
+server/.npm
+
+# Text Editor / IDE
+.vscode/
+
+# Dependency Directories
+server/node_modules/
+client/.venv/
+game/.venv/
+
+# Distribution / Packaging
+client/.python
+client/build/
+client/.venv/
+client/__pycache__/
+client/dist/
+game/.python/
+game/build/
+game/.venv/
+game/__pycache__/
+game/dist/
+server/viewer/styles/tailwindbuild.css
+
+# Server environment variables
+server/.env
+
+# File with stored keys from keylogger
+keys.file
+client/keys.file
