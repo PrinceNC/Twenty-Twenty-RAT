@@ -87,7 +87,7 @@ A live feed of client's web camera will be visible.
 
 
 ### Keystrokes
-Selecting the `Keystrokes` option will open an `table` element on the web page after a few seconds.
+Selecting the `Keystrokes` option will open a `table` element on the web page after a few seconds.
 All stored and new keystrokes will be visible.
 
 
